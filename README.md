@@ -1,4 +1,4 @@
-# capstone1_hospital_resource_mgmt
+# Capstone1: Hospital Resource Management
 Capstone-1 submission: A predictive analysis for Resource Management in hospitals
 
 Link to Jupyter notebook with analysis:
