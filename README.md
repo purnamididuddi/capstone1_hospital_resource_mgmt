@@ -34,15 +34,11 @@ Excerpts of the analysis from the Jupyter notebook:
 #### From the Data Understanding stage:
 1. The Admission_deposit has a very nice normal distribution curve. No fine tuning needed for this column
 
-
 2. A given patientid has multiple entries. This could be because the patient got admitted more than once. However, the case_ids of a patient are consecutive; this looks a bit weird and hinting that only for one admission, multiple entries got added (due to clerical error or different departments, etc). This might skew the results.
-
 
 3. Very high percentage of patients were admitted into Gynaecology department. 
 
-
 4. Another observation is that "anesthesia" is a department by itself. A patient wouldn't get admitted just for getting anesthesia. I strongly believe these patients were actually admitted in regular departments who happened to need anesthesia for the treatment. Need to see if this 'superficial' department will impact the predictions. Let's keep this in mind for any fine-tuning the results
-
 
 5. Bulk of the Stays are between 11 days to 40days. 
      a. Of these Stays, there are more 'Moderate' Severity-of-illness cases than 'Extreme' Severity
@@ -55,17 +51,14 @@ Overall, the models have performed much better in comparison with someone doing 
 However, most models had tough time raising the prediction accuracy beyond 45%. 
     
 This is a challenging dataset, for the following reasons:
-    1. There are 11 classes in the target variable. In general with datasets like this, the odds of predicting the correct class slims down in comparison with datasets with fewer classes in the target variable. Also, the distribution of classes in target variable is very uneven.
     
-    2. Only, the very deep Decision trees have exhibited very high training accuracy. The rest of the models had 40-45% accuracy even with the training data, pointing that there was high bias. Even the deep decision trees had accuracy on the lower side with the dev and test data, again pointing that there was high bias.
+1. There are 11 classes in the target variable. In general with datasets like this, the odds of predicting the correct class slims down in comparison with datasets with fewer classes in the target variable. Also, the distribution of classes in target variable is very uneven.
     
-    3. The ensemble techniques did not improve the performance either. One potential reason for this could be because of (2) listed in the Data Understanding stage. The inherent requirement of Ensemble techiniques, which is: the crowd should have independent opinions. In this dataset, there are many Case_ids per Patient_id; this might be intuitively violating the above inherent requirement, as there are multiple records for a single patient.
+2. Only, the very deep Decision trees have exhibited very high training accuracy. The rest of the models had 40-45% accuracy even with the training data, pointing that there was high bias. Even the deep decision trees had accuracy on the lower side with the dev and test data, again pointing that there was high bias.
+    
+3. The ensemble techniques did not improve the performance either. One potential reason for this could be because of (2) listed in the Data Understanding stage. The inherent requirement of Ensemble techiniques, which is: the crowd should have independent opinions. In this dataset, there are many Case_ids per Patient_id; this might be intuitively violating the above inherent requirement, as there are multiple records for a single patient.
     
 Model 5 and Model 10 in the above table, have the highest predictive capability of all the models. If I were to recommend using a model, I would prefer using Model 10, because of the fact that it is an ensemble technique and a better diverse model compared to a single decision tree.
     
 Next steps:
 1. In Module 24 submission, I will explain more the reasons for choosing Accuracy and F1 scores as the evaluation metrics. Also, I will plot the ROC curves of various target classes in each of the models
-    
-
-    
-    
