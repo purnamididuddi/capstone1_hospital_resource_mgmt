@@ -15,7 +15,7 @@ The goal is to help hospital management to predict the length-of-stay of a patie
 Excerpts of the analysis from the Jupyter notebook:
 ##### Many models were built in an effort to give best results to our customer (i.e., hospital management). Below is a summary of each of their performance
 
-| <span style='background:orange'>Model # | <span style='background:orange'>Model Description | <span style='background:orange'>Purpose | <span style='background:orange'># of Dimensions | <span style='background:orange'>Train/Dev/Test Accuracies | <span style='background:orange'>F1 Score on Testset |
+| <span style='background:orange'>Model # | <span style='background:orange'>Model Description | <span style='background:orange'>Parameters | <span style='background:orange'># of Dimensions | <span style='background:orange'>Train/Dev/Test Accuracies | <span style='background:orange'>F1 Score on Testset |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |<span style='background:yellow'> Model 0 | Random guessing | For a baseline | --- | 9.09 | --- |
 |<span style='background:yellow'> Model 1 | Logistic Regr | Initial logistic regr model | --- | 38.91/38.85/38.65 | 38.65 |
@@ -28,7 +28,7 @@ Excerpts of the analysis from the Jupyter notebook:
 |<span style='background:yellow'> Model 8 | Gridsearch on Feature extraction alpha | {'selector__estimator__alpha': 0.01} | 30 | 41.7/40.65/40.42 | 40.42 |
 |<span style='background:yellow'> Model 9 | Adaboost to compensate for high bias | {'boost__n_estimators': 25} | 30 | 36.96/37.32/37.38 | 37.38 |
 |<span style='background:yellow'> Model 10 | Gradientboost to compensate for high bias | {'gboost__n_estimators': 200} | 30 | 41.58/41.3/41.19 | 41.19 |
-|<span style='background:yellow'> Model 11 | RandomForests with deep trees to compensate for high variance | 100 | 30 | 99.81/33.98/33.79 | 33.79 |
+|<span style='background:yellow'> Model 11 | RandomForests with deep trees to compensate for high variance | {'max_depth': 100} | 30 | 99.81/33.98/33.79 | 33.79 |
 
 ### Summary of the findings:
 #### From the Data Understanding stage:
