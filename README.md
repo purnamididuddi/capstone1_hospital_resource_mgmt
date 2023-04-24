@@ -19,7 +19,7 @@ Excerpts of the analysis from the Jupyter notebook:
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |<span style='background:yellow'> Model 0 | Random guessing | For a baseline | --- | 9.09 | --- |
 |<span style='background:yellow'> Model 1 | Logistic Regr | Initial logistic regr model | --- | 38.91/38.85/38.65 | 38.65 |
-|<span style='background:yellow'> Model 2 | Basic Logistic Regr with OneHot on all categ | Baseline | 130 | 38.97/38.89/38.87 | 38.87 |
+|<span style='background:yellow'> Model 2 | Logistic Regr with OneHot on all categ | Consolidated onehot encoding | 130 | 38.97/38.89/38.87 | 38.87 |
 |<span style='background:yellow'> Model 3 | GridSearch Logistic Regr hyper params | {'lgr__C': 0.18957356524063793, 'lgr__max_iter... | 130 | 40.13/40.14/40.13 | 40.13 |
 |<span style='background:yellow'> Model 4 | GridSearch kNN hyper params | {'knn__n_neighbors': 50} | 130 | 41.89/39.04/39.24 | 39.24 |
 |<span style='background:yellow'> Model 5 | Decision Tree 1 | Moderate depth of 10 | 130 | 42.14/41.22/41.22 | 41.22 |
@@ -28,7 +28,7 @@ Excerpts of the analysis from the Jupyter notebook:
 |<span style='background:yellow'> Model 8 | Gridsearch on Feature extraction alpha | {'selector__estimator__alpha': 0.01} | 30 | 41.7/40.65/40.42 | 40.42 |
 |<span style='background:yellow'> Model 9 | Adaboost to compensate for high bias | {'boost__n_estimators': 25} | 30 | 36.96/37.32/37.38 | 37.38 |
 |<span style='background:yellow'> Model 10 | Gradientboost to compensate for high bias | {'gboost__n_estimators': 200} | 30 | 41.58/41.3/41.19 | 41.19 |
-|<span style='background:yellow'> Model 11 | RandomForests with deep trees to compensate for high variance | {'max_depth': 100} | 30 | 99.81/33.98/33.79 | 33.79 |
+|<span style='background:yellow'> Model 11 | RandomForests with deep trees to compensate for high variance | {'n_estimators': 50  'max_depth': 100} | 30 | 99.81/33.98/33.79 | 33.79 |
 
 ### Summary of the findings:
 #### From the Data Understanding stage:
