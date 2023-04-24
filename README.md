@@ -60,5 +60,5 @@ This is a challenging dataset, for the following reasons:
     
 Model 5 and Model 10 in the above table, have the highest predictive capability of all the models. If I were to recommend using a model, I would prefer using Model 10, because of the fact that it is an ensemble technique and a better diverse model compared to a single decision tree.
     
-Next steps:
+### Next steps:
 1. In Module 24 submission, I will explain more the reasons for choosing Accuracy and F1 scores as the evaluation metrics. Also, I will plot the ROC curves of various target classes in each of the models
